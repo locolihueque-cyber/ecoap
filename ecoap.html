@@ -1,0 +1,260 @@
+
+
+Copy code
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #a8e6cf 0%, #88d8a3 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c5530;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            color: #4a7c59;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c5530;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .recycling-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .recycling-item {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .recycling-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .recycling-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .location-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .tips-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tips-list li {
+            background: #e8f5e8;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #4a7c59;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #4a7c59;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .recycling-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌿 Ecoap</h1>
+            <p class="subtitle">¡Tu app para reciclar fácil y en familia! ♻️</p>
+            <img src="https://images.unsplash.com/photo-1588906669124-8accd2a1f0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Familia reciclando" class="hero-image">
+        </header>
+
+        <section id="como-reciclar">
+            <h2>📋 ¿Cómo reciclar correctamente?</h2>
+            <div class="recycling-grid">
+                <div class="recycling-item">
+                    <div class="recycling-icon">🟢</div>
+                    <h3>Plástico</h3>
+                    <p>Botellas, envases, bolsas. Lava y aplasta antes de reciclar.</p>
+                </div>
+                <div class="recycling-item">
+                    <div class="recycling-icon">🔵</div>
+                    <h3>Papel y Cartón</h3>
+                    <p>Periódicos, cajas, cuadernos. Sin cinta adhesiva ni grapas.</p>
+                </div>
+                <div class="recycling-item">
+                    <div class="recycling-icon">🟡</div>
+                    <h3>Metal</h3>
+                    <p>Latas, aerosoles vacíos, tapas. Limpios y secos.</p>
+                </div>
+                <div class="recycling-item">
+                    <div class="recycling-icon">🟤</div>
+                    <h3>Vidrio</h3>
+                    <p>Botellas, frascos. Quita tapones y etiquetas.</p>
+                </div>
+                <div class="recycling-item">
+                    <div class="recycling-icon">🗑️</div>
+                    <h3>Orgánico</h3>
+                    <p>Restos de comida, cáscaras. Para compostaje.</p>
+                </div>
+                <div class="recycling-item">
+                    <div class="recycling-icon">⚠️</div>
+                    <h3>NO Reciclar</h3>
+                    <p>Pañales, servilletas sucias, pilas, medicamentos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="donde-reciclar">
+            <h2>📍 ¿Dónde reciclar cerca de ti?</h2>
+            <div class="locations">
+                <div class="location-card">
+                    <h3>🟢 Contenedor Verde</h3>
+                    <p>En la calle - Vidrio</p>
+                </div>
+                <div class="location-card">
+                    <h3>🟡 Contenedor Amarillo</h3>
+                    <p>En la calle - Plástico y Metal</p>
+                </div>
+                <div class="location-card">
+                    <h3>🔵 Contenedor Azul</h3>
+                    <p>En la calle - Papel y Cartón</p>
+                </div>
+                <div class="location-card">
+                    <h3>🏠 Punto Limpio</h3>
+                    <p>Electrónicos, pilas, ropa</p>
+                </div>
+                <div class="location-card">
+                    <h3>🛒 Supermercados</h3>
+                    <p>Baterías, bombillas LED</p>
+                </div>
+                <div class="location-card">
+                    <h3>🌱 Composteros</h3>
+                    <p>Residuos orgánicos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips">
+            <h2>💡 Tips Ecoap para reciclar mejor</h2>
+            <ul class="tips-list">
+                <li>🧹 Lava siempre los envases antes de reciclar</li>
+                <li>✂️ Separa tapas de botellas de plástico</li>
+                <li>📦 Aplasta latas y botellas para ahorrar espacio</li>
+                <li>🚫 No mezcles residuos de diferentes tipos</li>
+                <li>👨‍👩‍👧‍👦 Involucra a toda la familia en la tarea</li>
+                <li>🎯 Haz del reciclaje un juego familiar</li>
+                <li>📱 Descarga Ecoap para encontrar puntos limpios</li>
+            </ul>
+            <div style="text-align: center;">
+                <a href="#como-reciclar" class="cta-button">¡Descarga Ecoap ahora! ♻️</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>🌍 Ecoap - Recicla fácil, vive verde<br>
+            <small>¡Tu app aliada para un planeta más limpio!</small></p>
+        </footer>
+    </div>
+</body>
+</html>
